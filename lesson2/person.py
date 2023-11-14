@@ -11,7 +11,30 @@
 
 
 class Person:
-    pass
+    def __init__(self, name, age):
+        """конструктор, принимающий имя и возраст человека"""
+        self.name = name
+        self.age = age
+
+    def display(self):
+        """метод, выводящий на экран имя и возраст человека"""
+        print(f"{self.name} is {self.age} years old")
+
+    @classmethod
+    def from_birth_year(cls, name, birth_year):
+        """класс - метод, принимающий имя и год рождения человека и возвращающий
+        объект класса Person"""
+        age = 2023 - birth_year
+        return cls(name, age)
+
+    @staticmethod
+    def is_adult(age: int):
+        """статический метод, принимающий возраст человека и возвращающий True,
+        если он старше 18 лет, и False в противном случае"""
+        if age >= 18:
+            return True
+        else:
+            return False
 
 
 person1 = Person("John", 28)

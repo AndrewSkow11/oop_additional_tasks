@@ -12,7 +12,29 @@
 
 
 class BankAccount:
-    pass
+    def __init__(self, balance):
+        self.__balance = balance
+
+    @property
+    def balance(self):
+        return self.__balance
+
+    @balance.setter
+    def balance(self, value):
+        self.__balance = value
+
+    def deposit(self, amount):
+        self.__balance += amount
+
+    def withdraw(self, amount):
+        """метод, который позволяет снять деньги со счета"""
+        self.__balance -= amount
+
+    def close(self):
+        """метод, который закрывает счет и возвращает оставшиеся на
+         нем деньги"""
+        print(f"Счёт закрыт, выведено денег: {self.__balance}")
+        self.__balance = 0
 
 
 account = BankAccount(1000)
