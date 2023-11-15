@@ -11,7 +11,21 @@
 
 
 class MyList:
-    pass
+    def __init__(self, data: list):
+        """Конструктор, принимающий список элементов"""
+        self.data = data
+
+    def __repr__(self):
+        return f'{MyList.__name__}({self.data})'
+
+    def __str__(self):
+        return str(self.data)
+
+    def __len__(self):
+        return len(self.data)
+
+    def __add__(self, other):
+        return self.data + other.data
 
 
 my_list1 = MyList([1, 2, 3])
@@ -22,3 +36,10 @@ print(len(my_list1))  # 3
 my_list2 = MyList([4, 5, 6])
 my_list3 = my_list1 + my_list2
 print(my_list3)  # [1, 2, 3, 4, 5, 6]
+
+# MyList([1, 2, 3])
+# [1, 2, 3]
+# 3
+# [1, 2, 3, 4, 5, 6]
+#
+# Process finished with exit code 0
