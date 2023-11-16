@@ -44,3 +44,10 @@ print(employee.get_salary())  # 5000
 
 manager = Manager("Jane", 10000, 5000)
 print(manager.get_salary())  # 15000
+
+# /usr/bin/python3 /Users/andrejskovorodnikov/Desktop/oop_additional_tasks/
+# lesson4/employee.py
+# 5000
+# 15000
+#
+# Process finished with exit code 0
