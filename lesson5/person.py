@@ -18,7 +18,36 @@
 
 
 class Person:
-    pass
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def get_name(self):
+        return self.name
+
+    def get_age(self):
+        return self.age
+
+class Employee2(Person):
+    def __init__(self, name, age, salary):
+        self.name = name
+        self.age = age
+        self.salary = salary
+
+
+    def get_salary(self):
+        return  self.salary
+
+
+class Manager2(Employee2):
+    def __init__(self, name, age, salary, bonus):
+        self.name = name
+        self.age = age
+        self.salary = salary
+        self.bonus = bonus
+
+    def get_bonus(self):
+        return self.bonus
 
 
 person = Person("John", 30)
@@ -35,3 +64,15 @@ print(manager.get_name())  # Bob
 print(manager.get_age())  # 40
 print(manager.get_salary())  # 10000
 print(manager.get_bonus())  # 5000
+
+# John
+# 30
+# Jane
+# 25
+# 5000
+# Bob
+# 40
+# 10000
+# 5000
+#
+# Process finished with exit code 0
